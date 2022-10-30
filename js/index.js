@@ -1,5 +1,5 @@
-import {Game} from './app/Game.js';
+import {getGameInstance} from './app/Game.js';
 
-let game = new Game();
+let game = getGameInstance();
 
 game.run();
