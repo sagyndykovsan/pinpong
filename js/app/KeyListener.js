@@ -11,18 +11,23 @@ export class KeyListener {
         // player 1
         if (this.keys.includes('w')) {
             player1.moveUp();
+            player1.decreaseAccel();
+        } else if (this.keys.includes('q')) {
+            player1.moveDown();
+            player1.increaseAccel();
+        } else {
+            player1.resetAccel();
         }
 
-        if (this.keys.includes('q')) {
-            player1.moveDown();
-        }
         // player 2
         if (this.keys.includes('[')) {
             player2.moveUp();
-        }
-
-        if (this.keys.includes(']')) {
+            player2.decreaseAccel();
+        } else if (this.keys.includes(']')) {
             player2.moveDown();
+            player2.increaseAccel();
+        } else {
+            player2.resetAccel();
         }
     }
 
@@ -42,26 +47,39 @@ export class KeyListener {
         // player1 keys
         if (e.key == 'w' && !this.keys.includes('w')) {
             let keyPos = this.keys.indexOf('q');
-            if (keyPos != -1) this.keys.splice(keyPos, 1);
+            if (keyPos != -1) {
+                this.keys.splice(keyPos, 1);
+            }
             this.keys.push('w');
         }
 
         if (e.key == 'q' && !this.keys.includes('q')) {
             let keyPos = this.keys.indexOf('w');
-            if (keyPos != -1) this.keys.splice(keyPos, 1);
+            if (keyPos != -1) {
+                this.keys.splice(keyPos, 1);
+            }
+
             this.keys.push('q');
         }
 
         // player 2 keys
         if (e.key == '[' && !this.keys.includes('[')) {
             let keyPos = this.keys.indexOf(']');
-            if (keyPos != -1) this.keys.splice(keyPos, 1);
-            this.keys.push('[');        }
+            if (keyPos != -1) {
+                this.keys.splice(keyPos, 1);
+            }
+            
+            this.keys.push('[');        
+        }
 
         if (e.key == ']' && !this.keys.includes(']')) {
             let keyPos = this.keys.indexOf('[');
-            if (keyPos != -1) this.keys.splice(keyPos, 1);
-            this.keys.push(']');        }
+            if (keyPos != -1) {
+                this.keys.splice(keyPos, 1);
+            }
+
+            this.keys.push(']');        
+        }
     }
 
     removeKey(e) {
