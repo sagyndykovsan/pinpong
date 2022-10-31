@@ -67,7 +67,7 @@ export class Player2 {
     reset() {
         this.posX = this.defaultPosX;
         this.posY = this.defaultPosY;
-        this.element.style.left = this.posX + 'px';
+        this.element.style.right = this.posX + 'px';
         this.element.style.top = this.posY + 'px';
     }
 }
