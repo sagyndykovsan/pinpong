@@ -72,4 +72,4 @@ export class Player2 {
         this.element.style.right = this.posX + 'px';
         this.element.style.top = this.posY + 'px';
     }
-}
+}// 
