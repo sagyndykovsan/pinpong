@@ -63,4 +63,11 @@ export class Player2 {
     resetAccel() {
         this.accel = 0;
     }
+
+    reset() {
+        this.posX = this.defaultPosX;
+        this.posY = this.defaultPosY;
+        this.element.style.left = this.posX + 'px';
+        this.element.style.top = this.posY + 'px';
+    }
 }
