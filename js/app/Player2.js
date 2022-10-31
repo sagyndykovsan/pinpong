@@ -45,4 +45,20 @@ export class Player2 {
         this.posY += 7;
         this.element.style.top = this.posY + 'px';
     }
+
+    increaseAccel() {
+        if (this.accel < 100) {
+            this.accel += 1
+        }
+    }
+
+    decreaseAccel() {
+        if (this.accel > -100) {
+            this.accel -= 1
+        }
+    }
+
+    resetAccel() {
+        this.accel = 0;
+    }
 }

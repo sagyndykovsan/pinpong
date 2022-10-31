@@ -2,6 +2,7 @@ export class Player1 {
     element;
     posX;
     posY;
+    accel = 0;
 
     constructor() {
         this.posX = 20;
@@ -44,5 +45,23 @@ export class Player1 {
 
         this.posY += 7;
         this.element.style.top = this.posY + 'px';
+    }
+
+    increaseAccel() {
+        if (this.accel < 100) {
+            this.accel += 1
+        }
+        console.log(this.accel);
+    }
+
+    decreaseAccel() {
+        if (this.accel > -100) {
+            this.accel -= 1
+        }
+        console.log(this.accel);
+    }
+
+    resetAccel() {
+        this.accel = 0;
     }
 }
