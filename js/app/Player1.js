@@ -3,6 +3,9 @@ export class Player1 {
     posX;
     posY;
     accel = 0;
+    points = 0;
+    defaultPosX = 20;
+    defaultPosY = 300;
 
     constructor() {
         this.posX = 20;
@@ -63,5 +66,12 @@ export class Player1 {
 
     resetAccel() {
         this.accel = 0;
+    }
+
+    reset() {
+        this.posX = this.defaultPosX;
+        this.posY = this.defaultPosY;
+        this.element.style.left = this.posX + 'px';
+        this.element.style.top = this.posY + 'px';
     }
 }
