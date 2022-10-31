@@ -1,4 +1,4 @@
-import { ball, player1, player2 } from "./Game.js";
+import { game, ball, player1, player2 } from "./Game.js";
 
 export class KeyListener {
     keys;
@@ -34,14 +34,14 @@ export class KeyListener {
     listen() {
         document.addEventListener('keydown', this.addKey.bind(this));
         document.addEventListener('keyup', this.removeKey.bind(this));
-        // document.addEventListener('keypress', this.checkStartKey.bind(this));
+        document.addEventListener('keypress', this.checkStartKey.bind(this));
     }
 
-    // checkStartKey(e) {
-    //     if (e.key == 'space') {
-    //         this.game.start();
-    //     }
-    // }
+    checkStartKey(e) {
+        if (e.key == ' ') {
+            game.start();
+        }
+    }
 
     addKey(e) {
         // player1 keys

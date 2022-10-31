@@ -48,13 +48,13 @@ export class Player2 {
 
     increaseAccel() {
         if (this.accel < 100) {
-            this.accel += 1
+            this.accel += 3
         }
     }
 
     decreaseAccel() {
         if (this.accel > -100) {
-            this.accel -= 1
+            this.accel -= 3
         }
     }
 
