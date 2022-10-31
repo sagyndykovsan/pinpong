@@ -11,10 +11,10 @@ export class KeyListener {
         // player 1
         if (this.keys.includes('w')) {
             player1.moveUp();
-            player1.increaseAccel();
+            player1.decreaseAccel();
         } else if (this.keys.includes('q')) {
             player1.moveDown();
-            player1.decreaseAccel();
+            player1.increaseAccel();
         } else {
             player1.resetAccel();
         }
@@ -22,10 +22,10 @@ export class KeyListener {
         // player 2
         if (this.keys.includes('[')) {
             player2.moveUp();
-            player2.increaseAccel();
+            player2.decreaseAccel();
         } else if (this.keys.includes(']')) {
             player2.moveDown();
-            player2.decreaseAccel();
+            player2.increaseAccel();
         } else {
             player2.resetAccel();
         }
