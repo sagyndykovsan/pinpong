@@ -49,11 +49,13 @@ export class Ball {
 
     outOfBorderX() {
         if (this.posX+34 < 0) {
+            this.player2.points++;
             this.reset();
             game.stopRound();
         }
 
         if (this.posX > 1550) {
+            this.player1.points++;
             this.reset();
             game.stopRound();
         }

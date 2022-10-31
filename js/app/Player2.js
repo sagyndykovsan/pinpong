@@ -2,6 +2,8 @@ export class Player2 {
     element;
     posX;
     posY;
+    accel = 0;
+    points = 0;
 
     constructor() {
         this.posX = 20;

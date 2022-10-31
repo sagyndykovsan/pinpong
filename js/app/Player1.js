@@ -3,6 +3,7 @@ export class Player1 {
     posX;
     posY;
     accel = 0;
+    points = 0;
 
     constructor() {
         this.posX = 20;
