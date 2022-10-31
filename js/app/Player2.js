@@ -4,6 +4,8 @@ export class Player2 {
     posY;
     accel = 0;
     points = 0;
+    defaultPosX = 20;
+    defaultPosY = 300;
 
     constructor() {
         this.posX = 20;
